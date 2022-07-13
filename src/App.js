@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header/Header';
+import CreateArea from './Components/CreateArea/CreateArea';
+import Notes from './Components/Notes/Notes';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function App() {
+
+  const [noteList, setNoteList] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:4001/api/getAll")
+    .then(res => setNoteList(res.data));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* console.log(noteList); */}
+     < Header />
+     < CreateArea noteList = {noteList} setNoteList = {setNoteList}/>
+     < Notes noteList = {noteList} setNoteList = {setNoteList}/>
     </div>
   );
 }
