@@ -21,6 +21,7 @@ const CreateArea = ({setNoteList}) => {
     const add = () => {
         if(noteObj.title){
           axios.post("http://localhost:4001/api/addNew", noteObj)
+          //axios.post("https://react-google-keep-backend.herokuapp.com/api/addNew", noteObj)
           .then(res => setNoteList(res.data));
           setNoteObj({
             title : "",

@@ -5,5 +5,7 @@ body {
 }
 
 .App {
+    /* display: flex; */
+    /* flex-direction: col; */
     margin-left: 10px;
 } 

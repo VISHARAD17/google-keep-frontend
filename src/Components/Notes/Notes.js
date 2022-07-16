@@ -5,6 +5,7 @@ const Notes = ({ noteList, setNoteList }) => {
 
     const handleDelete = (id) => {
         axios.post("http://localhost:4001/api/delete", { id })
+        //axios.post("https://react-google-keep-backend.herokuapp.com/api/delete", { id })
         .then(res => setNoteList(res.data));
     }
 

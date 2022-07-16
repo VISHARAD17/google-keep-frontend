@@ -12,12 +12,12 @@ function App() {
 
   useEffect(() => {
     axios.get("http://localhost:4001/api/getAll")
+    //axios.get("https://react-google-keep-backend.herokuapp.com/api/getAll")
     .then(res => setNoteList(res.data));
   }, []);
 
   return (
     <div className="App">
-      {/* console.log(noteList); */}
       < Header />
       < CreateArea noteList = {noteList} setNoteList = {setNoteList}/>
       < Notes noteList = {noteList} setNoteList = {setNoteList}/>
