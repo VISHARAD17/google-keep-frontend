@@ -18,6 +18,9 @@ const Notes = ({ noteList, setNoteList }) => {
                     <button onClick={() => handleDelete(note._id)} > 
                         <i className="fa-solid fa-trash"></i>
                     </button>
+                    {/* <button onClick={() => editNote(note._id)}>
+                        <i className='fa-solid fa-pen-to-square'></i>
+                    </button> */}
             </div>
             ))
         }

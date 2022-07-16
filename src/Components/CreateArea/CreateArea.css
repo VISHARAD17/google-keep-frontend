@@ -13,7 +13,7 @@ form.create-note textarea {
     border: none;
     padding: 4px;
     outline: none;
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: inherit;
     resize: none;
 }
@@ -30,4 +30,5 @@ form.create-note button {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     outline: none;
+    font-size: 30px;
 }

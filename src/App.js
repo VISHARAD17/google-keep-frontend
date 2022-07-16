@@ -4,6 +4,7 @@ import CreateArea from './Components/CreateArea/CreateArea';
 import Notes from './Components/Notes/Notes';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Footer from './Components/Footer/Footer';
 
 function App() {
 
@@ -17,9 +18,10 @@ function App() {
   return (
     <div className="App">
       {/* console.log(noteList); */}
-     < Header />
-     < CreateArea noteList = {noteList} setNoteList = {setNoteList}/>
-     < Notes noteList = {noteList} setNoteList = {setNoteList}/>
+      < Header />
+      < CreateArea noteList = {noteList} setNoteList = {setNoteList}/>
+      < Notes noteList = {noteList} setNoteList = {setNoteList}/>
+      < Footer />
     </div>
   );
 }
